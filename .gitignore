@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+storage/*.db
+storage/cache/*
+!storage/cache/.gitkeep
+data/*.db
+data/.gitkeep
+.streamlit/secrets.toml
+.pytest_cache/
+*.egg-info/
+.DS_Store

@@ -1,0 +1,18 @@
+streamlit>=1.35
+yfinance>=0.2.40
+pandas>=2.0,<3.0        # pinned <3.0: pandas 3.0 (Jan 2026) broke a private API statsmodels 0.14.x
+                        # relies on internally (TypeError in statsmodels/tsa/arima/estimators/yule_walker.py).
+                        # Safe to unpin once you're on a statsmodels release that's confirmed fixed for pandas 3.0.
+numpy>=1.26
+statsmodels>=0.14
+plotly>=5.20
+scipy>=1.11
+python-dotenv>=1.0
+anthropic>=0.34
+openai>=1.30          # also used for the OpenRouter provider (OpenAI-compatible API)
+google-genai>=0.3      # for LLM_PROVIDER=google (NOT the deprecated google-generativeai package)
+pytest>=8.0            # for tests/test_services.py
+
+# Optional, advanced backtest engine (services/backtest_vectorbt.py).
+# Only supports Python 3.6-3.10 -- install separately in a matching venv if needed:
+# vectorbt>=0.25
